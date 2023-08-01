@@ -1,0 +1,141 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+} */
+
+main {
+    padding: 20px;
+
+    margin-top: 10vh;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.horizontal-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-item {
+    width: calc(50% - 10px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.grid-item h2 {
+    margin-top: 0;
+}
+
+.grid-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dropdown {
+    position: relative;
+    margin-top: 10px;
+}
+
+.dropdown-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dropdown-content th, .dropdown-content td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.dropdown-content th {
+    background-color: #333;
+    color: #fff;
+}
+
+.dropdown-content td {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.buttons-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+    
+}
+
+.screenshot-button {
+    margin-right: 10px;
+}
+
+.v{
+    overflow: hidden;
+}
+
+
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .horizontal-grid {
+        flex-direction: column;
+    }
+    .grid-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .grid-content {
+        flex-direction: column;
+    }
+    .buttons-container {
+        display: inline;
+        /* justify-content: flex-start; */
+        margin-top: 2vh;
+        
+    }
+
+    .button{
+        margin-top: 2vh;
+    }
+    
+}

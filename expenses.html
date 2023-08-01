@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verify.css">
+    <link rel="stylesheet" href="accounts.css">
+    <link rel="stylesheet" href="expenses.css">
+     
+    
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Society</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="index.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="verify.html">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Payment Details</span>
+                </a></li>
+                <li><a href="expenses.html">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Expenses</span>
+                </a></li>
+                <li><a href="accounts.html">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Verify Accounts</span>
+                </a></li>
+                <li><a href="accountmodify.html">
+                    <i class="uil uil-credit-card"></i>
+                    <span class="link-name">Accounts</span><!----======== Manage Accounts ======== -->
+                </a></li>
+                <!-- <li><a href="#">
+                    <i class="uil uil-user"></i>
+                    <span class="link-name">Members</span>
+                </a></li> -->
+                <li><a href="issues.html">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Issues</span>
+                </a></li>
+                <li><a href="contactus.html">
+                    <i class="uil uil-user"></i>
+                    <span class="link-name">ContactUs</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="images/profile.jpg" alt="">
+        </div>
+
+
+        <main>
+            <div class="horizontal-grid">
+                <div class="grid-item">
+                    <h2>Total Funds</h2>
+                    <h3>250000</h3>
+                    
+                    <!-- <p class="v">TID-35515365633444066012043</p> -->
+                    <div class="grid-content">
+                        <!-- <div class="dropdown">
+                            <button class="button dropdown-button">Information</button>
+                            <div class="dropdown-content"> -->
+                                <!-- Dropdown Information Here -->
+                                <!-- <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Column 2</th>
+                                        <th>Column 3</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 1A</td>
+                                        <td>Data 1B</td>
+                                        <td>Data 1C</td>
+                                    </tr> -->
+                                    <!-- Add more rows if needed -->
+                                <!-- </table>
+                            </div>
+                        </div> -->
+                        <div class="buttons-container">
+                            <!-- <button class="button screenshot-button">Screenshot</button> -->
+                            <button class="button submit-button">Show all Transaction</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h2>Total Expenses</h2>
+                    <h3>10000</h3>
+                    <!-- <p class="v">TID-35515365633444066012043</p> -->
+                    <div class="grid-content">
+                        <!-- <div class="dropdown">
+                            <button class="button dropdown-button">Information</button>
+                            <div class="dropdown-content"> -->
+                                <!-- Dropdown Information Here -->
+                                <!-- <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 2A</td>
+                                        <td>Data 2B</td>
+                                        <td>Data 2C</td>
+                                    </tr> -->
+                                    <!-- Add more rows if needed -->
+                                <!-- </table>
+                            </div>
+                        </div> -->
+                        <div class="buttons-container">
+                            <!-- <button class="button screenshot-button">Screenshot</button> -->
+                            <button class="button submit-button">Show all Expenses</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
