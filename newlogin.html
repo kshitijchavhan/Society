@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>login page</title>
 <link rel="stylesheet" href="CSS/newlogin.css">
+<link rel="style" href="Javascript/newlogin.js">
 </head>
 <body>
 	<header>
@@ -59,7 +60,22 @@
 		</div>
 	</div>
 
-  <link rel="script" href="Javascript/newlogin.js">
+  <script>
+    let signup = document.querySelector(".signup");
+let login = document.querySelector(".login");
+let slider = document.querySelector(".slider");
+let formSection = document.querySelector(".form-section");
+  
+signup.addEventListener("click", () => {
+    slider.classList.add("moveslider");
+    formSection.classList.add("form-section-move");
+});
+  
+login.addEventListener("click", () => {
+    slider.classList.remove("moveslider");
+    formSection.classList.remove("form-section-move");
+});
+  </script>
 </body>
 
 </html>
