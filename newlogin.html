@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>login page</title>
+<link rel="stylesheet" href="CSS/newlogin.css">
+</head>
+<body>
+	<header>
+		<h1 class="heading">Society name</h1>
+		<h3 class="title">Login and Registration</h3>
+    </header>
+
+	<!-- container div -->
+	<div class="container">
+
+		<!-- upper button section to select
+             the login or signup form -->
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login">Login</button>
+			<button class="signup">Signup</button>
+		</div>
+
+		<!-- Form section that contains the
+             login and the signup form -->
+		<div class="form-section">
+
+			<!-- login form -->
+			<form action="login" method="post">
+				<div class="login-box">
+					<input name="username" type="text" class="email ele"
+						placeholder="Eneter your username"> <input id="password" name="password" type="password"
+						class="password ele" placeholder="password" onkeyup="checkPassword()">
+					
+                    <input type="submit" class="clkbtn" value="Login">
+				</div>
+			</form>
+			<form action="save" method="post">
+				<!-- signup form -->
+				<div class="signup-box">
+					<input name="username" type="text" class="name ele"
+						placeholder="Enter user name"> <input name="name"
+						type="text" class="name ele" placeholder="Enter full Name">
+					<input name="class" type="text" class="name ele"
+						placeholder="Enter Class Name"> <input type="text" name="mobile_number"
+						class="name ele" placeholder="Enter Mobile Number"> <input
+						name="roll_number" type="text" class="name ele"
+						placeholder="Enter Roll Number"> <input name="email"
+						type="email" class="email ele" placeholder="email@email.com">
+					<input name="password" type="password" class="password ele"
+						placeholder="password"> <input type="password"
+						class="password ele" placeholder="Confirm password"> <input
+						class="clkbtn" value="Signup" type="submit">
+				</div>
+			</form>
+		</div>
+	</div>
+
+  <link rel="script" href="Javascript/newlogin.js">
+</body>
+
+</html>
