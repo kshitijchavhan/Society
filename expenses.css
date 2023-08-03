@@ -113,6 +113,12 @@ main {
     overflow: hidden;
 }
 
+.container{
+
+    margin-top: 2vh;
+    
+}
+
 
 
 /* Media query for mobile screens */
