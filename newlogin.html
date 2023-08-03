@@ -32,7 +32,11 @@
 			<!-- login form -->
 			<form action="login" method="post">
 				<div class="login-box">
-					<input name="username" type="text" class="email ele"
+					<select name="usertype" id="select">
+                        <option value="">admin</option>
+                        <option value="">Members</option>
+                    </select>
+                    <input name="username" type="text" class="email ele"
 						placeholder="Eneter your username"> <input id="password" name="password" type="password"
 						class="password ele" placeholder="password" onkeyup="checkPassword()">
 					
@@ -45,11 +49,9 @@
 					<input name="username" type="text" class="name ele"
 						placeholder="Enter user name"> <input name="name"
 						type="text" class="name ele" placeholder="Enter full Name">
-					<input name="class" type="text" class="name ele"
-						placeholder="Enter Class Name"> <input type="text" name="mobile_number"
-						class="name ele" placeholder="Enter Mobile Number"> <input
-						name="roll_number" type="text" class="name ele"
-						placeholder="Enter Roll Number"> <input name="email"
+					 <input type="text" name="mobile_number"
+						class="name ele" placeholder="Enter Mobile Number"> 
+                         <input name="email"
 						type="email" class="email ele" placeholder="email@email.com">
 					<input name="password" type="password" class="password ele"
 						placeholder="password"> <input type="password"

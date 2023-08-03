@@ -99,10 +99,16 @@ header {
 .form-section-move {
     left: -500px;
 }
-  
+/*select user type option css */
+#select{
+padding: 1%;
+height: 10%;
+border-radius: 10px;
+border-color:rgb(90, 90, 244) ;
+}
 .login-box,
 .signup-box {
-    height: 100%;
+    height: 70%;
     width: 500px;
     display: flex;
     flex-direction: column;
