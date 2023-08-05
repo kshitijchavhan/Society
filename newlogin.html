@@ -49,14 +49,16 @@
 					<input name="username" type="text" class="name ele"
 						placeholder="Enter user name"> <input name="name"
 						type="text" class="name ele" placeholder="Enter full Name">
-					 <input type="text" name="mobile_number"
+					 <input type="text" onkeyup="verifymobilenumber()" name="mobile_number" id="mobile_number"
 						class="name ele" placeholder="Enter Mobile Number"> 
-                         <input name="email"
+                        <label id="msg1" style="display: none;"></label> 
+						<input name="email"
 						type="email" class="email ele" placeholder="email@email.com">
-					<input name="password" type="password" class="password ele"
-						placeholder="password"> <input type="password"
-						class="password ele" placeholder="Confirm password"> <input
-						class="clkbtn" value="Signup" type="submit">
+					    <input name="password" id="password" type="password" class="password ele"
+						placeholder="password"> <input type="password" id="repassword"
+						class="password ele" placeholder="Confirm password">
+						<label id="msg"></label>
+						<input class="clkbtn" value="Sign up" type="submit">
 				</div>
 			</form>
 		</div>
@@ -77,6 +79,17 @@ login.addEventListener("click", () => {
     slider.classList.remove("moveslider");
     formSection.classList.remove("form-section-move");
 });
+function verifymobilenumber(){
+	let a=document.getElementById("mobile_number").value;
+ 
+	if(10!=a.length){
+     document.getElementById("msg1").style="display:'none' font-size:1px"
+	}
+	else{
+	let a= document.getElementById("msg1").innerHTML="mobile number must be 10 digit";
+	    a.style="font-size:1px";
+	}
+	}
   </script>
 </body>
 
