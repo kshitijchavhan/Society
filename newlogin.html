@@ -2,95 +2,89 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>login page</title>
-<link rel="stylesheet" href="CSS/newlogin.css">
-<link rel="style" href="Javascript/newlogin.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="CSS/newlogin.css">
+    <link rel="style" href="Javascript/newlogin.js">
 </head>
+
 <body>
-	<header>
-		<h1 class="heading">Society name</h1>
-		<h3 class="title">Login and Registration</h3>
+    <header>
+        <h1 class="heading">Society name</h1>
+        <h3 class="title">Login and Registration</h3>
     </header>
 
-	<!-- container div -->
-	<div class="container">
+  
+    <div class="container">
 
-		<!-- upper button section to select
-             the login or signup form -->
-		<div class="slider"></div>
-		<div class="btn">
-			<button class="login">Login</button>
-			<button class="signup">Signup</button>
-		</div>
+      
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
 
-		<!-- Form section that contains the
-             login and the signup form -->
-		<div class="form-section">
+     
+        <div class="form-section">
 
-			<!-- login form -->
-			<form action="login" method="post">
-				<div class="login-box">
-					<select name="usertype" id="select">
-                        <option value="">admin</option>
-                        <option value="">Members</option>
+        
+            <form action="login" method="post">
+                <div class="login-box">
+                    <select name="usertype" id="select">
+                        <option value="admin">Admin</option>
+                        <option value="members">Members</option>
                     </select>
-                    <input name="username" type="text" class="email ele"
-						placeholder="Eneter your username"> <input id="password" name="password" type="password"
-						class="password ele" placeholder="password" onkeyup="checkPassword()">
-					
+                    <input name="username" type="text" class="email ele" placeholder="Enter your username">
+                    <input id="password" name="password" type="password" class="password ele" placeholder="password">
                     <input type="submit" class="clkbtn" value="Login">
-				</div>
-			</form>
-			<form action="save" method="post">
-				<!-- signup form -->
-				<div class="signup-box">
-					<input name="username" type="text" class="name ele"
-						placeholder="Enter user name"> <input name="name"
-						type="text" class="name ele" placeholder="Enter full Name">
-					 <input type="text" onkeyup="verifymobilenumber()" name="mobile_number" id="mobile_number"
-						class="name ele" placeholder="Enter Mobile Number"> 
-                        <label id="msg1" style="display: none;"></label> 
-						<input name="email"
-						type="email" class="email ele" placeholder="email@email.com">
-					    <input name="password" id="password" type="password" class="password ele"
-						placeholder="password"> <input type="password" id="repassword"
-						class="password ele" placeholder="Confirm password">
-						<label id="msg"></label>
-						<input class="clkbtn" value="Sign up" type="submit">
-				</div>
-			</form>
-		</div>
-	</div>
+                </div>
+            </form>
+            <form action="save" method="post">
+               
+                <div class="signup-box">
+                    <input name="username" type="text" class="name ele" placeholder="Enter user name">
+                    <input name="name" type="text" class="name ele" placeholder="Enter full Name">
+                    <input type="number" onkeyup="verifyMobileNumber()" name="mobile_number" id="mobile_number"
+                        class="name ele" placeholder="Enter Mobile Number">
+                    <label id="msg1" style="color: red;"></label>
+                    <input name="email" type="email" class="email ele" placeholder="email@email.com">
+                    <input name="password1" id="password1" type="password" class="password ele" placeholder="password">
+                    <input type="password" id="repassword" class="password ele" placeholder="Confirm password">
+                    <label id="msg"></label>
+                    <input class="clkbtn" value="Sign up" type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
 
-  <script>
-    let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
-  
-signup.addEventListener("click", () => {
-    slider.classList.add("moveslider");
-    formSection.classList.add("form-section-move");
-});
-  
-login.addEventListener("click", () => {
-    slider.classList.remove("moveslider");
-    formSection.classList.remove("form-section-move");
-});
-function verifymobilenumber(){
-	let a=document.getElementById("mobile_number").value;
- 
-	if(10!=a.length){
-     document.getElementById("msg1").style="display:'none' font-size:1px"
-	}
-	else{
-	let a= document.getElementById("msg1").innerHTML="mobile number must be 10 digit";
-	    a.style="font-size:1px";
-	}
-	}
-  </script>
+    <script>
+        let signup = document.querySelector(".signup");
+        let login = document.querySelector(".login");
+        let slider = document.querySelector(".slider");
+        let formSection = document.querySelector(".form-section");
+
+        signup.addEventListener("click", () => {
+            slider.classList.add("moveslider");
+            formSection.classList.add("form-section-move");
+        });
+
+        login.addEventListener("click", () => {
+            slider.classList.remove("moveslider");
+            formSection.classList.remove("form-section-move");
+        });
+
+        function verifyMobileNumber() {
+            let a = document.getElementById("mobile_number").value;
+
+            if (a.length === 10) {
+                document.getElementById("msg1").innerHTML = "";
+            } else {
+                document.getElementById("msg1").innerHTML = "Invalid Number";
+                document.getElementById("msg1").style.fontSize = "10px";
+            }
+        }
+    </script>
 </body>
 
 </html>
